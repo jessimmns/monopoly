@@ -9,3 +9,7 @@ def test_achat():
     print("Test achat réussi !")
 
 test_achat()
+
+
+
+
