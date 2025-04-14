@@ -1,5 +1,6 @@
 from random import randint
 from Joueur import Joueur # Importation de la classe Joueur
+from Terrain import Terrain
 from Plateau import Plateau # Importation de la classe Plateau
 
 class Partie:
@@ -29,8 +30,9 @@ class Partie:
             
             # Traitement après déplacement
             case = self.plateau.avoir_case(joueur.position)
+            print("toto")
             case.action(joueur, self)
-            
+            print("titi")
             # Vérifier si le joueur a fait un double
             if joueur.doubles_consecutifs > 0 and joueur.doubles_consecutifs < 3:
                 print("Le joueur rejoue car il a fait un double")

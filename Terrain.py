@@ -54,7 +54,8 @@ class Terrain(Case):
             print(f"{self.nom} n'a pas de propriétaire")
             if joueur.solde >= self.cout_achat:
                 reponse = input(f"Voulez-vous acheter {self.nom} pour {self.cout_achat}€ ? (o/n): ")
-                if reponse == "1":
+                if reponse == "o":
+                    print(self.nom)
                     joueur.acheter_terrain(self)
         elif self.proprietaire != joueur:
             loyer = self.calculer_loyer()
